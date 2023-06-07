@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+ <script>
+ function Complete()
+{
+    let elem = `Прізвище: ${document.Sel1.family.value} \n
+    Ім"я: ${document.sel1.name.value} \n
+    Рік: ${document.sel1.age.value} \n
+    Телефон: ${document.sel1.phone.value} \n
+    `
+    alert(elem)
+}
+function CheckAge()
+{
+    let rik = document.sel1.age.value
+    if (rik <= 18)
+    {
+        rik = 18;
+    }
+    else 
+    {
+        document.sel1.age.value
+    }
+}
+</script>
+ </head>
+<body>
+<H1>Заповніть анкету</H1>
+<FORM NAME="Sel1">
+   
+ <!-- Анкета -->
+ <TABLE>
+ <TR><TD><B>Прізвище:<B></TD>
+ <TD><INPUT NAME="Family" SIZE=20
+ onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+ <TR><TD><B>Ім'я:<B></TD>
+ <TD><INPUT NAME="Name" SIZE=20
+ onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+ <TR><TD><B>Вік:<B></TD>
+ <TD><INPUT NAME="Age" SIZE=3 VALUE="18"
+ onBlur="this.value=CheckAge(this.value)"
+ onFocus="this.select()"></TD></TR>
+ <TR><TD><B>Телефон:<B></TD>
+ <TD><INPUT NAME="Phone" SIZE=10></TD></TR>
+ </TABLE>
+ 
+ <!-- Кнопки готовності та скидання -->
+ <INPUT TYPE="button" VALUE="Ok" onClick="Complete();">
+ <INPUT TYPE="reset" VALUE="Cancel">
+</FORM>
+</body>
+</html>
